@@ -114,13 +114,15 @@ def absolut_wpath_to_83(
     alli = sorted(list(alli))
     alli_len = []
     for x in zip_longest(alli, alli[1:]):
+
         try:
             allstri[-1] = allstri[-1] + (string[x[0]])
             if x[1] - x[0] > 1:
                 allstri.append("")
                 alli_len.append(x[0])
         except Exception:
-            continue
+            alli_len.append(x[0])
+            allstri.append("")
     return "".join(
         [
             y[-1]
