@@ -20,7 +20,7 @@ try:
 except Exception:
     # linux
     pass
-drivereg = re.compile(r"([a-z]:\\)", flags=re.I)
+drivereg = re.compile(r"\b([a-z]:\\)", flags=re.I)
 
 
 @functools.cache
